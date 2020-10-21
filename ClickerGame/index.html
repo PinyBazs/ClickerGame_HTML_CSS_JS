@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <title>Clicker Game</title>
+</head>
+<body id="parent">
+    <div class="top-container">
+        <img onclick="IncreaseCountOnClick()" id="ball" class="clicker-image" src="img/ball.jpg">
+        <header class="title">Soccer Clicker</header>
+        <h1>Number of visitors:</h1>
+        <h2 class="numberofvisitors" id="number-of-visitors">0</h2>
+        <h2 style="font-size: smaller;" class="numberofvisitors">Money:</h2>
+        <h4 style="font-size: smaller;" class="counter" id="point-counter">0</h4>
+        
+    </div>
+    <div>
+        <div class="left-panel">
+            <label style="margin-left: 30px; font-size: larger;">Football pitch updates:</label>
+            <ul style="list-style-type: none;">
+                <li>
+                    <img class="upgrade-list-elements" src="img/beer.png">
+                    <label>Beer vendor</label>
+                    <label>Price:</label>
+                    <label id="beer-price">10</label><br>
+                    <label>Level:</label>
+                    <label id="beer-level">0</label>
+                    <button style="margin-right: 20px;" onclick="IncreaseBeerPrice()">Buy</button>
+                </li>
+                <li>
+                    <img class="upgrade-list-elements" src="img/player.png">
+                    <label>Player</label>
+                    <label>Price:</label>
+                    <label id="player-price">50</label><br>
+                    <label>Level:</label>
+                    <label id="player-level">0</label>
+                    <button style="margin-right: 20px;" onclick="IncreasePlayerPrice()">Buy</button>
+                </li>
+                <li>
+                    <img class="upgrade-list-elements" src="img/grass.png">
+                    <label>Grass</label>
+                    <label>Price:</label>
+                    <label id="grass-price">200</label><br>
+                    <label>Level:</label>
+                    <label id="grass-level">0</label>
+                    <button style="margin-right: 20px;" onclick="IncreaseGrassPrice()">Buy</button>
+                </li>
+                <li>
+                    <img class="upgrade-list-elements" src="img/soccergoal.png">
+                    <label>Soccer goal</label>
+                    <label>Price:</label>
+                    <label id="soccer-goal-price">600</label><br>
+                    <label>Level:</label>
+                    <label id="soccer-goal-level">0</label>
+                    <button style="margin-right: 20px;" onclick="IncreaseSoccerGoalPrice()">Buy</button>
+                </li>
+                <li>
+                    <img class="upgrade-list-elements" src="img/auditorium.png">
+                    <label>Auditorium</label>
+                    <label>Price:</label>
+                    <label id="auditorium-price">1500</label><br>
+                    <label>Level:</label>
+                    <label id="auditorium-level">0</label>
+                    <button style="margin-right: 20px;" onclick="IncreaseAuditoriumPrice()">Buy</button>
+                </li>
+            </ul>
+        </div>
+        <div id="right-panel" class="right-panel">
+            <label id="special-updates" style="margin-left: 30px; font-size: larger;"></label>
+            <label id="beer-update"></label>
+            <button id="beer-update-button" style="visibility: hidden;" onclick="UpdateBeer()"></button>
+            <label id="player-update"></label>
+        </div>
+    </div>
+    
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
